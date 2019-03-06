@@ -38,6 +38,25 @@
    7. for() and for..in loops for value based iteration
    8. constructor function, used in case of the reference function when it is used as class.
    9. The 'new' nmoniker for instance generation.
+5. JavaScript DOM Objects
+   1. window
+      1. Browser Window Instance
+      2. load
+   2. document
+      1. Current HTML DOM loaded inside the Window instance
+      2. document object uses all events of window object
+      3. Methods
+         1. getElementById
+            1. returns a single DOM Element object based on its id
+         2. getElementsByName
+            1. return an array of DOM elements based on 'name' attribute of DOM
+         3. getElemenetsByTag
+            1. returns an array based on Tag Name
+      4. Events for DOM
+         1. change --> onChange
+         2. keyUp --> onKeyUp
+         3. mouseenter
+         4. mouseleave
 
 The JavaScript file can be executed on Node.js server using the following command
 
@@ -56,10 +75,61 @@ ES 6 Features
 
 1. The 'Local Scope aka block scope Declaration using "let" keyword'
 2. Template String
-3. Array Object Methods
+   1. A mechansim of building immutable string as HTML string Expressions.
+   2. Syntax
+      1. `The String is ${Expresion} ${Expression}...`
+         1. \${Expression} will be replaced by actual value of Expression
+      2. This also support Multi-line String Objects
+3. Array Object Methods with Data Structures
+   1. Array
+      1. Homogeneous and Hetrogeneous Data Store
+      2. Methods
+         1. push()/pop()/indexOf()
+         2. ES 6 methods
+            1. find()
+            2. filter()
+            3. sort()
+      3. Iteration using
+         1. ES 3 to 5
+            1. for loop
+            2. for..in loop
+         2. ES 6
+            1. for..of loop
+               1. Symbol.iterator()
+   2. Set
+      1. Hash Set
+      2. Unique Data in it
+   3. Map
+      1. Dictionary
 4. Arrow Function / Operator
-5. Class
-   1. this scope
-6. Collections
-7. Promises
-8. Modules
+   1. New Syntax that represent an input expression for a method that accepts callback as input parameter
+      1. function abc(function(a,b){...});
+      2. function abc((a,b)=>{...}); <---- Arrow Operator
+5. The 'rest' parameters
+
+   1. variable number of parameters to a method.
+   2. Syntax is
+      1. function abc(...data){...}
+         1. data will be internally treated as 'arguments' array
+         2. Uses
+            1. abc(1), abc(1,2), abc(1,2,3)
+      2. function doWork(a,b,...data){...}
+         1. If a method accepts fixed and rest parameters, then rest parameters will always be at end
+      3. The ... ar known as the 'spread operator' and internally it is treated as Object.assign([],source object)
+         1. Object.assign(target,source)
+         2. e.g.
+            1. function calculate(...data) ---> calulate(1,2)
+            2. arguments array contains [1,2]
+               1. Object.assign([],arguments)
+
+6. Object Oriented Programming
+   1. Class
+      1. "this" scope
+      2. The 'class' keyword for defining class
+         1. The public definitions for properties / members using 'this' prefix
+         2. All methods /functions are 'public' by default
+            1. Note: the 'function' keyword is not required for function definition in class
+         3. We need 'constructor' function for defining the public member variables/properties
+7. Collections
+8. Promises
+9. Modules

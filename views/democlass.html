@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./../bundle/democlass.bundle.js"></script>
+    <script>
+        window.onload = function(){
+            var btnadd = document.getElementById('btnadd');
+            btnadd.addEventListener('click',function(){
+                var math = new BasicMath(100,200);
+                var res = math.add();
+                document.getElementById('txtres').value = res;
+                alert('Add  = ' + res);
+            },false);
+        }
+   </script>
+</head>
+
+<body>
+    <input type="text" id="txtres">
+    <input type="button" value="add" id="btnadd">
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        window.onload = function(){
+             var txt = document.getElementById('txt');
+             txt.addEventListener('change',function(){
+                 // display value of txt
+                /// alert('change ' + this.value);
+             },false);
+            txt.addEventListener('keyup',function(){
+            // display value of txt
+            //alert('key up ' + this.value);
+            },false);
+            
+            var btnclear = document.getElementById('btnclear');
+            btnclear.addEventListener('click',function(){
+              //  document.getElementById('txt').value = "";
+               // document.getElementById('txt1').value = "";
+               // document.getElementById('txt2').value = "";
+              // var txts = document.getElementsByTagName('input');
+              var txts = document.getElementsByClassName("c1");
+               for(var i=0;i<txts.length;i++){
+                   txts[i].value= "";
+               }
+            },false);
+
+            var names = ["A","B","C","D"];
+            var opt="";
+            for(var i=0;i<names.length;i++){
+                  opt+='<option value="'+names[i]+'">'+names[i]+ '</option>' ;
+            }
+            var list = document.getElementById("lstnames");
+            list.innerHTML = opt;
+            list.addEventListener('change',function(){
+                var val = this.options[this.selectedIndex].value;
+                alert(val);
+            },false);
+
+         }
+     </script>
+</head>
+
+<body>
+    <input type="text" id="txt" class="c1">
+    <input type="text" id="txt1" class="c1">
+    <input type="text" id="txt2" class="c1">
+    <br />
+    <input type="button" value="Clear" id="btnclear">
+    <br>
+    <select id="lstnames"></select>
+    <hr>
+    <input type="radio" name="r" id="r1"> red
+    <input type="radio" name="r" id="r2"> blue
+    <input type="radio" name="r" id="r3"> yellow
+</body>
+
+</html>
