@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="ProductId">ProductId</label>
+            <input type="text" id="ProductId" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="ProductName">ProductName</label>
+            <input type="text" id="ProductName" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="BasePrice">Base Price</label>
+            <input type="text" id="BasePrice" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="CategoryName">Category Name</label>
+            <select id="CategoryName" class="form-control"></select>
+        </div>
+        <div class="form-group">
+            <label for="Manufacturer">Manufacturer Name</label>
+            <select id="Manufacturer" class="form-control"></select>
+        </div>
+        <div class="form-group">
+            <label for="Description">Description</label>
+            <textarea id="Description" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="button" value="New" id="btnnew" class="btn btn-default">
+            <input type="button" value="Save" id="btnsave" class="btn btn-success">
+        </div>
+    </div>
+    <div class="container">
+        <table>
+            <thead id="thead"></thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+    <script src="./../bundle/productLogic.bundle.js"></script>
+    <script>
+        var ui = new UIPresenter();
+    </script>
+</body>
+
+</html>
